@@ -33,6 +33,7 @@ export default function ProjectsPage() {
           image: doc.data().image,
           year: doc.data().year,
         }));
+        console.log(projectsFormated);
         setProjects(projectsFormated as any);
       } catch (err) {
         console.log(err);
@@ -68,7 +69,7 @@ export default function ProjectsPage() {
                 }}
               >
                 <Image
-                  src={project.image}
+                  src={project.image ?? "asd"}
                   alt=""
                   width={200}
                   height={200}
